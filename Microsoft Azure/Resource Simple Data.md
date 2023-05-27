@@ -194,9 +194,7 @@ def RetrieveData(params):
     # noted that route table is for each peering
     # ref: https://learn.microsoft.com/en-us/rest/api/expressroute/express-route-circuits/list-routes-table?tabs=HTTP
     device_path = 'Primary'
-    if 'properties' in circuit_api_data \
-        and 'peerings' in circuit_api_data['properties'] \
-        and circuit_api_data['properties']['peerings']:
+    if 'properties' in circuit_api_data and 'peerings' in circuit_api_data['properties'] and circuit_api_data['properties']['peerings']:
         for peering in circuit_api_data['properties']['peerings']:
             peering_name = peering['name']
             peering_id = f"{circuit_id}/peerings/{peering_name}"
