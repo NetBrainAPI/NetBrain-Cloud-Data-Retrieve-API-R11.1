@@ -10,7 +10,7 @@
     - [Sample 1 -- Get Resource API Data with HTTP GET Method](#sample_1) 
     - [Sample 2 -- Get Virtual Network Gateway BGP Peer Status with HTTP POST Method](#sample_2) 
     - [Sample 3 -- Get ExpressRoute Circuit API Data](#sample_3)
-    - [Sample 4 -- Get ExpressRoute Circuit Peering Status](#sample_4)
+    - [Sample 4 -- Get ExpressRoute Circuit Route Table](#sample_4)
     - [Sample 5 -- Get Virtual Network API Data](#sample_5)
 - [Default Azure API Versions](#default_api_version)
 
@@ -157,7 +157,7 @@ def RetrieveData(params):
     return json.dumps(data, indent=4)
 ```
 
-## Sample 4 -- Get ExpressRoute Circuit Peering Status  <a name="sample_4"></a>
+## Sample 4 -- Get ExpressRoute Circuit Route Table  <a name="sample_4"></a>
 ```python
 '''
 Begin Declare Input Parameters
