@@ -123,7 +123,7 @@ def BuildParameters(context, device_name, params):
     return self_node['params']
  
 def RetrieveData(param):
-    _id = NBAWSAPILibrary.GetCloudWatchResourceId(param)
+    _id = NBAWSAPILibrary.GetResourceIDFromDataModel(param)
     dt_now = datetime.datetime.now()
     dt_yestoday = dt_now - datetime.timedelta(days=1)
     param['func_param'] = {
