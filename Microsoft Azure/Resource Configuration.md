@@ -360,7 +360,7 @@ Below are the Azure APIs used to generate this configuration.
 ## Azure Virtual Machine
 
 ### Introduction
-Configuration feature is not supported for Azure Virtual Machine yet. Please send API to get the resource data instead. Reference: [https://github.com/NetBrainAPI/NetBrain-Cloud-Data-Retrieve-API-R11.1/blob/main/Microsoft%20Azure/Resource%20Simple%20Data.md](https://github.com/NetBrainAPI/NetBrain-Cloud-Data-Retrieve-API-R11.1/blob/main/Microsoft%20Azure/Resource%20Simple%20Data.md)
+Configuration feature is not supported for Azure Virtual Machine yet. Please send API to get the resource data instead. Reference: [https://github.com/NetBrainAPI/NetBrain-Cloud-Data-Retrieve-API-R11.1/blob/main/Microsoft%20Azure/Resource%20Simple%20Data.md](https://github.com/NetBrainAPI/NetBrain-Cloud-Data-Retrieve-API-R11.1/blob/main/Microsoft%20Azure/Resource%20Simple%20Data.md).
 
 
 ## Azure VPN Gateway
