@@ -75,12 +75,12 @@ For sample
 '''
 
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context,
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
     )
-    return nb_node
+    return response
 
 def RetrieveData(params):
     nb_node = params['params']
@@ -107,12 +107,12 @@ For sample
 '''
 
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context,
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
     )
-    return nb_node
+    return response
 
 def RetrieveData(params):
     nb_node = params['params']
@@ -135,12 +135,12 @@ End Declare
 '''
  
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context,
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
     )
-    return nb_node
+    return response
  
  
 def RetrieveData(params):   
@@ -167,12 +167,12 @@ End Declare
 '''
  
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context,
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
     )
-    return nb_node
+    return response
  
  
 def RetrieveData(params):   
@@ -224,12 +224,12 @@ End Declare
 '''
  
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context,
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
     )
-    return nb_node
+    return response
  
  
 def RetrieveData(params):   
