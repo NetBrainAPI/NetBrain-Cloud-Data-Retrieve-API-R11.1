@@ -68,12 +68,12 @@ For sample
 metric_name = 'ExpressRouteGatewayCpuUtilization'  # metric name
 
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context, 
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params' : ['*']}
     )
-    return nb_node
+    return response
 
 def RetrieveData(params):
     data = NBAzureAPILibrary.GetMonitorMetrics(
@@ -102,12 +102,12 @@ For sample
 metric_name = 'BgpAvailability'  # metric name
 
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context, 
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params' : ['*']}
     )
-    return nb_node
+    return response
 
 def RetrieveData(params):
     # Note that MSEE (Microsoft Enterprise Edge) is generated from ExpressRoute Circuit.
@@ -136,12 +136,12 @@ End Declare
 metric_name = 'BytesInDDoS'  # metric name
 
 def BuildParameters(context, device_name, params):
-    nb_node = GetDeviceProperties(
+    response = GetDeviceProperties(
         context,
         device_name,
         {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
     )
-    return nb_node
+    return response
  
  
 def RetrieveData(params):   
