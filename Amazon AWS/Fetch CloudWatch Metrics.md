@@ -119,14 +119,15 @@ import json
 import datetime
  
 def BuildParameters(context, device_name, params):
-    self_node = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
-    return self_node['params']
+    response = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
+    return response
  
-def RetrieveData(param):
-    _id = NBAWSAPILibrary.GetResourceIDFromDataModel(param)
+def RetrieveData(params):
+    nb_node = params['params']
+    _id = NBAWSAPILibrary.GetResourceIDFromDataModel(nb_node)
     dt_now = datetime.datetime.now()
     dt_yestoday = dt_now - datetime.timedelta(days=1)
-    param['func_param'] = {
+    nb_node['func_param'] = {
         'StartTime': dt_yestoday,
         'EndTime': dt_now,
         'MaxDatapoints': 20,
@@ -150,7 +151,7 @@ def RetrieveData(param):
             }
         ]
     }
-    res = NBAWSAPILibrary.GetCloudWatchMetrics(param)
+    res = NBAWSAPILibrary.GetCloudWatchMetrics(nb_node)
     return json.dumps(res, indent=4, default=str)
     
  ```

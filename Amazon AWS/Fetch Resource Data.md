@@ -137,12 +137,13 @@ For sample
 import json
   
 def BuildParameters(context, device_name, params):
-    self_node = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
-    return self_node['params']
+    response = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
+    return response
       
-def RetrieveData(param):
+def RetrieveData(params):
+    nb_node = params['params']
     data = NBAWSAPILibrary.GetResourceData(
-                param=param, 
+                param=nb_node, 
                 func_name='describe_transit_gateway_route_tables', 
                 filter_keys=['transit-gateway-id']
     )
@@ -167,14 +168,15 @@ For sample
 import json
   
 def BuildParameters(context, device_name, params):
-    self_node = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
-    return self_node['params']
+    response = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
+    return response
       
-def RetrieveData(param):
+def RetrieveData(params):
+    nb_node = params['params']
     # customized_filters is optional   
     customized_filters = [{'Name': 'transit-gateway-id', 'Values': ['tgw-0cf091f03edf14349']}]
     data = NBAWSAPILibrary.GetResourceData(
-                param=param, 
+                param=nb_node, 
                 func_name='describe_transit_gateway_route_tables', 
                 customized_filters=customized_filters
     )
@@ -199,10 +201,11 @@ For sample
 import json
   
 def BuildParameters(context, device_name, params):
-    self_node = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
-    return self_node['params']
+    response = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
+    return response
       
-def RetrieveData(param):
+def RetrieveData(params):
+    nb_node = params['params']
     # customized_func_mapping is optional 
     customized_func_mapping = {
         'describe_transit_gateway_route_tables':
@@ -214,7 +217,7 @@ def RetrieveData(param):
         }
     }
     data = NBAWSAPILibrary.GetResourceData(
-                param=param, 
+                param=nb_node, 
                 func_name='describe_transit_gateway_route_tables', 
                 filter_keys=['transit-gateway-id'], 
                 customized_func_mapping=customized_func_mapping
