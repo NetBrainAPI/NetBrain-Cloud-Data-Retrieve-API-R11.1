@@ -9,9 +9,8 @@
 - [Samples](#sample)
     - [Sample 1 -- Get Resource API Data with HTTP GET Method](#sample_1) 
     - [Sample 2 -- Get Virtual Network Gateway BGP Peer Status with HTTP POST Method](#sample_2) 
-    - [Sample 3 -- Get ExpressRoute Circuit API Data](#sample_3)
-    - [Sample 4 -- Get ExpressRoute Circuit Route Table](#sample_4)
-    - [Sample 5 -- Get Virtual Network API Data](#sample_5)
+    - [Sample 3 -- Get ExpressRoute Circuit API Data](#sample_3)    
+    - [Sample 4 -- Get Virtual Network API Data](#sample_4)
 - [Default Azure API Versions](#default_api_version)
 
 
@@ -157,64 +156,7 @@ def RetrieveData(params):
     return json.dumps(data, indent=4)
 ```
 
-## Sample 4 -- Get ExpressRoute Circuit Route Table  <a name="sample_4"></a>
-```python
-'''
-Begin Declare Input Parameters
-[
-]
-End Declare
-'''
- 
-def BuildParameters(context, device_name, params):
-    response = GetDeviceProperties(
-        context,
-        device_name,
-        {'techName': 'Microsoft Azure', 'paramType': 'SDN', 'params': ['*']}
-    )
-    return response
- 
- 
-def RetrieveData(params):   
-    # Note that MSEE (Microsoft Enterprise Edge) is generated from ExpressRoute Circuit.
-    # One ExpressRoute Circuit generates two MSEE (Primary and Secondary).
-    # The ExpressRoute Circuit resource URI is saved in the "circuitId" data field of MSEE.
-    nb_msee = params['params']
-    circuit_id = nb_msee['circuitId']
-    
-    # get Expressroute Circuit data
-    circuit_api_data = NBAzureAPILibrary.GetResourceDataByAPI(
-        api_server_id=params['apiServerId'],
-        azure_resource_uri=circuit_id
-    )
-    
-    results = []
-    
-    # formulate route table id
-    # noted that route table is for each peering
-    # ref: https://learn.microsoft.com/en-us/rest/api/expressroute/express-route-circuits/list-routes-table?tabs=HTTP
-    device_path = 'Primary'
-    if 'properties' in circuit_api_data and 'peerings' in circuit_api_data['properties'] and circuit_api_data['properties']['peerings']:
-        for peering in circuit_api_data['properties']['peerings']:
-            peering_name = peering['name']
-            peering_id = f"{circuit_id}/peerings/{peering_name}"
-            table_id = f"{peering_id}/routeTables/{device_path}"
-            peering_api_data = NBAzureAPILibrary.GetResourceDataByAPI(
-                api_server_id=params['apiServerId'],
-                azure_resource_uri=table_id,
-                http_method='POST'
-            )
-            if peering_api_data:
-                results.append({
-                    'peeringName': peering_name,
-                    'peeringId': peering['id'],
-                    'routeTable': peering_api_data
-                }) 
-    
-    return json.dumps(results, indent=4)
-```
-
-## Sample 5 -- Get Virtual Network API Data  <a name="sample_5"></a>
+## Sample 4 -- Get Virtual Network API Data  <a name="sample_4"></a>
 ```python
 '''
 Begin Declare Input Parameters
