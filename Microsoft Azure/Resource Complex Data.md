@@ -439,7 +439,7 @@ Passing-in the keyword "**run_time_state**" for the param `data_type`, the API r
 Below are the Azure APIs used to generate this configuration.
 |**Resource/Action**|**Relationship**|**Azure API Version**|**Azure API document**|
 |------|------|------|------|
-| Virtual Machines - Get | self | 2022-11-01 | https://learn.microsoft.com/en-us/rest/api/compute/virtual-machines/instance-view?tabs=HTTP | 
+| Virtual Machines - Instance View | self | 2022-11-01 | https://learn.microsoft.com/en-us/rest/api/compute/virtual-machines/instance-view?tabs=HTTP | 
 
 
 #### Sample
