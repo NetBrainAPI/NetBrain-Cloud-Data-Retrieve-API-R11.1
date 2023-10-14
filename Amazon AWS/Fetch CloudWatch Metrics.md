@@ -12,7 +12,7 @@
 
 The `GetCloudWatchMetrics` function is a static method defined in the `NBAWSAPILibrary` class. It leverages the AWS CloudWatch solution to fetch metrics of AWS resources via the AWS SDK.
 
-Reference: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch/client/get_metric_data.html.
+Reference: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch/client/get_metric_data.html
 
 # Supported devices  <a name="devices"></a>
 
