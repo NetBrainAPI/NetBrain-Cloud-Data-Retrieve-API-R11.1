@@ -12,7 +12,7 @@
 
 The `GetCloudWatchMetrics` function is a static method defined in the `NBAWSAPILibrary` class. It leverages the AWS CloudWatch solution to fetch metrics of AWS resources via the AWS SDK.
 
-Reference: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch/client/get_metric_data.html
+Reference: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/cloudwatch/client/get_metric_data.html.
 
 # Supported devices  <a name="devices"></a>
 
@@ -28,7 +28,7 @@ Reference: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/ser
 
 
 # API Definition <a name="definition"></a>
- - `GetCloudWatchMetrics` is a method that retrieves CloudWatch metrics data for a specified resource. It takes in a dictionary of parameters, which includes information such as the resource ID, the CloudWatch metric data query, and the CloudWatch client configuration
+ - `GetCloudWatchMetrics` is a method that retrieves CloudWatch metrics data for a specified resource. It takes in a dictionary of parameters, which includes information such as the resource ID, the CloudWatch metric data query, and the CloudWatch client configuration.
 
 
  - `GetResourceIDFromDataModel` method is used to get the AWS resource ID from NetBrain data model. This resource ID is then used to construct the CloudWatch metric query, which is passed-in as a parameter to `NBAWSAPILibrary.GetCloudWatchMetrics` method to retrieve the metric data.
