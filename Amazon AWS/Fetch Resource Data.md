@@ -23,6 +23,7 @@ Below are supported device by built-in mapping function. Please use `customized_
 * AWS Network Load Balancer
 * AWS Application Load Balancer
 * AWS Gateway Load Balancer
+* AWS DX Router
 
 # API Definition <a name="definition"></a>
 The `GetResourceData` function is used to retrieve data from AWS resources using AWS SDK methods. It takes various parameters such as params which contain the standard parameters for the AWS SDK method.
