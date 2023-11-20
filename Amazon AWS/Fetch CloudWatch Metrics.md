@@ -24,7 +24,7 @@ Reference: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/ser
 * AWS Network Load Balancer
 * AWS Application Load Balancer
 * AWS Gateway Load Balancer
-* AWS DX Router (coming soon...)
+* AWS DX Router
 
 
 # API Definition <a name="definition"></a>
