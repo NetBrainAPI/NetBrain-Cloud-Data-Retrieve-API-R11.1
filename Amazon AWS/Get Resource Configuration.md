@@ -1243,10 +1243,10 @@ Below are the AWS SDK used to generate this configuration.
 {
     "netbrainNotes": "This config file is generated via API",
     "netbrainHostName": "EqDC2-370kou9loeqh0(dxcon-fgw645uf)",
-    "ownerAccount": "747895045325",
+    "ownerAccount": "xxxxxxxxxxx",
     "virtualInterfaceId": "dxvif-ffpma0ph",
     "location": "EqDC2",
-    "connectionId": "dxcon-fgw645uf",
+    "connectionId": "xxxxxxxxxxx",
     "virtualInterfaceType": "private",
     "virtualInterfaceName": "Virginia-VLAN-2",
     "vlan": 468,
@@ -1279,43 +1279,43 @@ Below are the AWS SDK used to generate this configuration.
     "awsLogicalDeviceId": "EqDC2-370kou9loeqh0",
     "tags": [],
     "siteLinkEnabled": false,
-    'connections': [
+    "connections": [
         {
-            'ownerAccount': 'string',
-            'connectionId': 'string',
-            'connectionName': 'string',
-            'connectionState': 'ordering'|'requested'|'pending'|'available'|'down'|'deleting'|'deleted'|'rejected'|'unknown',
-            'region': 'string',
-            'location': 'string',
-            'bandwidth': 'string',
-            'vlan': 123,
-            'partnerName': 'string',
-            'loaIssueTime': datetime(2015, 1, 1),
-            'lagId': 'string',
-            'awsDevice': 'string',
-            'jumboFrameCapable': True|False,
-            'awsDeviceV2': 'string',
-            'awsLogicalDeviceId': 'string',
-            'hasLogicalRedundancy': 'unknown'|'yes'|'no',
-            'tags': [
+            "ownerAccount": "xxxxxxxxxxx",
+            "connectionId": "xxxxxxxxxxx",
+            "connectionName": "xxxxxxxxxxx",
+            "connectionState": "xxxxxxxxxxx",
+            "region": "xxxxxxxxxxx",
+            "location": "xxxxxxxxxxx",
+            "bandwidth": "xxxxxxxxxxx",
+            "vlan": 123,
+            "partnerName": "xxxxxxxxxxx",
+            "loaIssueTime": "xxxxxxxxxxx",
+            "lagId": "xxxxxxxxxxx",
+            "awsDevice": "xxxxxxxxxxx",
+            "jumboFrameCapable": True|False,
+            "awsDeviceV2": "xxxxxxxxxxx",
+            "awsLogicalDeviceId": "xxxxxxxxxxx",
+            "hasLogicalRedundancy": "xxxxxxxxxxx",
+            "tags": [
                 {
-                    'key': 'string',
-                    'value': 'string'
-                },
+                    "key": "xxxxxxxxxxx",
+                    "value": "xxxxxxxxxxx"
+                }
             ],
-            'providerName': 'string',
-            'macSecCapable': True|False,
-            'portEncryptionStatus': 'string',
-            'encryptionMode': 'string',
-            'macSecKeys': [
+            "providerName": "xxxxxxxxxxx",
+            "macSecCapable": True|False,
+            "portEncryptionStatus": "xxxxxxxxxxx",
+            "encryptionMode": "xxxxxxxxxxx",
+            "macSecKeys": [
                 {
-                    'secretARN': 'string',
-                    'ckn': 'string',
-                    'state': 'string',
-                    'startOn': 'string'
-                },
+                    "secretARN": "xxxxxxxxxxx",
+                    "ckn": "xxxxxxxxxxx",
+                    "state": "xxxxxxxxxxx",
+                    "startOn": "xxxxxxxxxxx"
+                }
             ]
-        },
+        }
     ]
 }
 ```
