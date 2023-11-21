@@ -9,6 +9,7 @@
     - [Sample 1 -- Using filter keys](#sample-1) 
     - [Sample 2 -- Using customized filters](#sample-2)
     - [Sample 3 -- Using customized function mapping](#sample-3)
+    - [Sample 4 -- Using **kwargs](#sample-4)
 
 
 # Introduction <a name="introduction"></a>
@@ -222,6 +223,44 @@ def RetrieveData(params):
                 func_name='describe_transit_gateway_route_tables', 
                 filter_keys=['transit-gateway-id'], 
                 customized_func_mapping=customized_func_mapping
+    )
+    return json.dumps(data, indent=4, default=str)
+ ```
+
+
+## Sample 4 -- Using **kwargs <a name="sample4"></a>
+```python
+'''
+Begin Declare Input Parameters
+ [
+    {"name": "$intf_name"}
+ ]
+ End Declare
+ '''
+import json
+import datetime
+ 
+def BuildParameters(context, device_name, params):
+    intf_name = params['intf_name']     
+     
+    response = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
+    dev = response['params']
+     
+    res_intf = GetInterfaceProperties(context, device_name, intf_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
+    dev.update(res_intf['params']) 
+    return response
+
+ 
+def RetrieveData(params):
+    nb_vif = params['params']     
+    vif_id = NBAWSAPILibrary.GetResourceIDFromDataModel(nb_vif)
+    connection_id = nb_vif['connectionId']     
+     
+    data = NBAWSAPILibrary.GetResourceData(
+                param=nb_vif,
+                func_name='describe_virtual_interfaces',
+                connectionId=connection_id,
+                virtualInterfaceId=vif_id
     )
     return json.dumps(data, indent=4, default=str)
  ```
