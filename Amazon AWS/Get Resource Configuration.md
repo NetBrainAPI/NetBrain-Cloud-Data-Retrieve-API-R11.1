@@ -14,7 +14,7 @@ To retrieve the configuration data for a resource, you can utilize NetBrain's bu
 * [AWS Direct Connect Gateway](#aws-direct-connect-gateway)
 * [AWS NAT Gateway](#aws-nat-gateway)
 * [AWS Firewall](#aws-firewall)
-
+* [AWS Direct Connect Router](#aws-direct-connect-router)
 
 ## AWS VPC Router
 
@@ -1217,6 +1217,106 @@ Below are the AWS SDK used to generate this configuration.
         },
         "RetryAttempts": 0
     }
+}
+```
+</details>
+<br />
+  
+
+
+## AWS Direct Connect Router
+
+### Introduction
+The configuration of the AWS Direct Connect Router relies on the corresponding AWS SDK of the AWS direct connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the direct connect router, including its connectivity, security, etc.
+
+### Content
+Below are the AWS SDK used to generate this configuration.
+|**Resource/Action**|**Relationship**|**AWS SDK document**|
+|------|------|------|
+| describe_virtual_interfaces | self | https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_virtual_interfaces.html |
+| describe_connections | connections | https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_connections.html |
+
+### Sample
+<details><summary>Configuration File</summary>
+
+```json
+{
+    "netbrainNotes": "This config file is generated via API",
+    "netbrainHostName": "EqDC2-370kou9loeqh0(dxcon-fgw645uf)",
+    "ownerAccount": "747895045325",
+    "virtualInterfaceId": "dxvif-ffpma0ph",
+    "location": "EqDC2",
+    "connectionId": "dxcon-fgw645uf",
+    "virtualInterfaceType": "private",
+    "virtualInterfaceName": "Virginia-VLAN-2",
+    "vlan": 468,
+    "asn": 8030,
+    "amazonSideAsn": 64520,
+    "amazonAddress": "172.16.253.18/30",
+    "customerAddress": "172.16.253.17/30",
+    "addressFamily": "ipv4",
+    "virtualInterfaceState": "available",
+    "mtu": 1500,
+    "jumboFrameCapable": true,
+    "virtualGatewayId": "vgw-0ed7b3566fcdcc27e",
+    "directConnectGatewayId": "",
+    "routeFilterPrefixes": [],
+    "bgpPeers": [
+        {
+            "bgpPeerId": "dxpeer-fgiab2af",
+            "asn": 8030,
+            "addressFamily": "ipv4",
+            "amazonAddress": "172.16.253.18/30",
+            "customerAddress": "172.16.253.17/30",
+            "bgpPeerState": "available",
+            "bgpStatus": "up",
+            "awsDeviceV2": "EqDC2-370kou9loeqh0",
+            "awsLogicalDeviceId": "EqDC2-370kou9loeqh0"
+        }
+    ],
+    "region": "us-east-1",
+    "awsDeviceV2": "EqDC2-370kou9loeqh0",
+    "awsLogicalDeviceId": "EqDC2-370kou9loeqh0",
+    "tags": [],
+    "siteLinkEnabled": false,
+    'connections': [
+        {
+            'ownerAccount': 'string',
+            'connectionId': 'string',
+            'connectionName': 'string',
+            'connectionState': 'ordering'|'requested'|'pending'|'available'|'down'|'deleting'|'deleted'|'rejected'|'unknown',
+            'region': 'string',
+            'location': 'string',
+            'bandwidth': 'string',
+            'vlan': 123,
+            'partnerName': 'string',
+            'loaIssueTime': datetime(2015, 1, 1),
+            'lagId': 'string',
+            'awsDevice': 'string',
+            'jumboFrameCapable': True|False,
+            'awsDeviceV2': 'string',
+            'awsLogicalDeviceId': 'string',
+            'hasLogicalRedundancy': 'unknown'|'yes'|'no',
+            'tags': [
+                {
+                    'key': 'string',
+                    'value': 'string'
+                },
+            ],
+            'providerName': 'string',
+            'macSecCapable': True|False,
+            'portEncryptionStatus': 'string',
+            'encryptionMode': 'string',
+            'macSecKeys': [
+                {
+                    'secretARN': 'string',
+                    'ckn': 'string',
+                    'state': 'string',
+                    'startOn': 'string'
+                },
+            ]
+        },
+    ]
 }
 ```
 </details>
