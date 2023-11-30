@@ -1293,7 +1293,7 @@ Below are the AWS SDK used to generate this configuration.
             "loaIssueTime": "xxxxxxxxxxx",
             "lagId": "xxxxxxxxxxx",
             "awsDevice": "xxxxxxxxxxx",
-            "jumboFrameCapable": True,
+            "jumboFrameCapable": true,
             "awsDeviceV2": "xxxxxxxxxxx",
             "awsLogicalDeviceId": "xxxxxxxxxxx",
             "hasLogicalRedundancy": "xxxxxxxxxxx",
@@ -1304,7 +1304,7 @@ Below are the AWS SDK used to generate this configuration.
                 }
             ],
             "providerName": "xxxxxxxxxxx",
-            "macSecCapable": True,
+            "macSecCapable": true,
             "portEncryptionStatus": "xxxxxxxxxxx",
             "encryptionMode": "xxxxxxxxxxx",
             "macSecKeys": [
