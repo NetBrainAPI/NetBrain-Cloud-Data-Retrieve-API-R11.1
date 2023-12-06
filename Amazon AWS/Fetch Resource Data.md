@@ -239,23 +239,22 @@ Begin Declare Input Parameters
  '''
 import json
 import datetime
- 
+
 def BuildParameters(context, device_name, params):
-    intf_name = params['intf_name']     
-     
+    intf_name = params['intf_name']
+
     response = GetDeviceProperties(context, device_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
     dev = response['params']
-     
+
     res_intf = GetInterfaceProperties(context, device_name, intf_name, {'techName': 'Amazon AWS', 'paramType': 'SDN', 'params': ['*']})
-    dev.update(res_intf['params']) 
+    dev.update(res_intf['params'])
     return response
 
- 
 def RetrieveData(params):
-    nb_vif = params['params']     
+    nb_vif = params['params']
     vif_id = NBAWSAPILibrary.GetResourceIDFromDataModel(nb_vif)
-    connection_id = nb_vif['connectionId']     
-     
+    connection_id = nb_vif['connectionId']
+
     data = NBAWSAPILibrary.GetResourceData(
                 param=nb_vif,
                 func_name='describe_virtual_interfaces',
