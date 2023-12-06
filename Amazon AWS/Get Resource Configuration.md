@@ -1242,9 +1242,9 @@ Below are the AWS SDK used to generate this configuration.
 ```json
 {
     "netbrainNotes": "This config file is generated via API",
-    "netbrainHostName": "EqDC2-370kou9loeqh0(dxcon-fgw645uf)",
+    "netbrainHostName": "EqDC2-xxxxxxxxxxxx(dxcon-xxxxxxxx)",
     "ownerAccount": "xxxxxxxxxxx",
-    "virtualInterfaceId": "dxvif-ffpma0ph",
+    "virtualInterfaceId": "dxvif-xxxxxxxxx",
     "location": "EqDC2",
     "connectionId": "xxxxxxxxxxx",
     "virtualInterfaceType": "private",
@@ -1258,25 +1258,25 @@ Below are the AWS SDK used to generate this configuration.
     "virtualInterfaceState": "available",
     "mtu": 1500,
     "jumboFrameCapable": true,
-    "virtualGatewayId": "vgw-0ed7b3566fcdcc27e",
+    "virtualGatewayId": "vgw-xxxxxxxxxxxxxxx",
     "directConnectGatewayId": "",
     "routeFilterPrefixes": [],
     "bgpPeers": [
         {
-            "bgpPeerId": "dxpeer-fgiab2af",
+            "bgpPeerId": "dxpeer-xxxxxxxx",
             "asn": 8030,
             "addressFamily": "ipv4",
             "amazonAddress": "172.16.253.18/30",
             "customerAddress": "172.16.253.17/30",
             "bgpPeerState": "available",
             "bgpStatus": "up",
-            "awsDeviceV2": "EqDC2-370kou9loeqh0",
-            "awsLogicalDeviceId": "EqDC2-370kou9loeqh0"
+            "awsDeviceV2": "EqDC2-xxxxxxxxxxx",
+            "awsLogicalDeviceId": "EqDC2-xxxxxxxxxxx"
         }
     ],
     "region": "us-east-1",
-    "awsDeviceV2": "EqDC2-370kou9loeqh0",
-    "awsLogicalDeviceId": "EqDC2-370kou9loeqh0",
+    "awsDeviceV2": "EqDC2-xxxxxxxxxxx",
+    "awsLogicalDeviceId": "EqDC2-xxxxxxxxxxx",
     "tags": [],
     "siteLinkEnabled": false,
     # Describe connections: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_connections.html
