@@ -14,7 +14,7 @@ To retrieve the configuration data for a resource, you can utilize NetBrain's bu
 * [AWS Direct Connect Gateway](#aws-direct-connect-gateway)
 * [AWS NAT Gateway](#aws-nat-gateway)
 * [AWS Firewall](#aws-firewall)
-* [AWS Direct Connect Router](#aws-direct-connect-router)
+* [AWS DX Router](#aws-dx-router)
 
 ## AWS VPC Router
 
@@ -1224,10 +1224,10 @@ Below are the AWS SDK used to generate this configuration.
   
 
 
-## AWS Direct Connect Router
+## AWS DX Router
 
 ### Introduction
-The configuration of the AWS Direct Connect Router relies on the corresponding AWS SDK of the AWS direct connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the direct connect router, including its connectivity, security, etc.
+The configuration of the AWS DX Router relies on the corresponding AWS SDK of the AWS direct connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the dx router, including its connectivity, security, etc.
 
 ### Content
 Below are the AWS SDK used to generate this configuration.
