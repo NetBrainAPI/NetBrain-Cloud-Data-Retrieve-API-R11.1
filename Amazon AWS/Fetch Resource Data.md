@@ -236,7 +236,8 @@ Begin Declare Input Parameters
     {"name": "$intf_name"}
  ]
  End Declare
- '''
+'''
+
 import json
 import datetime
 
