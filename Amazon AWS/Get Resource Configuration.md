@@ -1227,7 +1227,7 @@ Below are the AWS SDK used to generate this configuration.
 ## AWS DX Router
 
 ### Introduction
-The configuration of the AWS DX Router relies on the corresponding AWS SDK of the AWS direct connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the dx router, including its connectivity, security, etc.
+The configuration of the AWS DX Router relies on the corresponding AWS SDK of the AWS direct connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the DX Router, including its connectivity, security, etc.
 
 ### Content
 Below are the AWS SDK used to generate this configuration.
