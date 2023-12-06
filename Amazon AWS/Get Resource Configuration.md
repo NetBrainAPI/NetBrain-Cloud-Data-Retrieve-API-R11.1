@@ -1279,6 +1279,7 @@ Below are the AWS SDK used to generate this configuration.
     "awsLogicalDeviceId": "EqDC2-370kou9loeqh0",
     "tags": [],
     "siteLinkEnabled": false,
+    # Describe connections: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_connections.html
     "connections": [
         {
             "ownerAccount": "xxxxxxxxxxx",
