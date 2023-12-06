@@ -9,7 +9,7 @@
     - [Sample 1 -- Using filter keys](#sample-1) 
     - [Sample 2 -- Using customized filters](#sample-2)
     - [Sample 3 -- Using customized function mapping](#sample-3)
-    - [Sample 4 -- Using **kwargs](#sample-4)
+    - [Sample 4 -- Using kwargs](#sample-4)
 
 
 # Introduction <a name="introduction"></a>
@@ -228,7 +228,7 @@ def RetrieveData(params):
  ```
 
 
-## Sample 4 -- Using **kwargs <a name="sample4"></a>
+## Sample 4 -- Using kwargs <a name="sample4"></a>
 ```python
 '''
 Begin Declare Input Parameters
