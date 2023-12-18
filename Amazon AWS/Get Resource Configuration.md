@@ -900,7 +900,7 @@ Below are the AWS SDK used to generate this configuration.
 ## AWS Direct Connect Gateway
 
 ### Introduction
-The configuration of the AWS direct connect gateway is dependent on the AWS SDK response of the direct connect gateway as the primary response. The full resource configuration consists of some associated resources' data, including `attachments`, `associations`, and `association proposals`.
+The configuration of the AWS Direct Connect gateway is dependent on the AWS SDK response of the Direct Connect gateway as the primary response. The full resource configuration consists of some associated resources' data, including `attachments`, `associations`, and `association proposals`.
 
 ### Content
 Below are the AWS SDK used to generate this configuration.
@@ -1227,7 +1227,7 @@ Below are the AWS SDK used to generate this configuration.
 ## AWS DX Router
 
 ### Introduction
-The configuration of the AWS DX Router relies on the corresponding AWS SDK of the AWS direct connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the DX Router, including its connectivity, security, etc.
+The configuration of the AWS DX Router relies on the corresponding AWS SDK of the AWS Direct Connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the DX Router, including its connectivity, security, etc.
 
 ### Content
 Below are the AWS SDK used to generate this configuration.
