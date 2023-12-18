@@ -14,7 +14,7 @@ To retrieve the configuration data for a resource, you can utilize NetBrain's bu
 * [AWS Direct Connect Gateway](#aws-direct-connect-gateway)
 * [AWS NAT Gateway](#aws-nat-gateway)
 * [AWS Firewall](#aws-firewall)
-
+* [AWS DX Router](#aws-dx-router)
 
 ## AWS VPC Router
 
@@ -900,7 +900,7 @@ Below are the AWS SDK used to generate this configuration.
 ## AWS Direct Connect Gateway
 
 ### Introduction
-The configuration of the AWS direct connect gateway is dependent on the AWS SDK response of the direct connect gateway as the primary response. The full resource configuration consists of some associated resources' data, including `attachments`, `associations`, and `association proposals`.
+The configuration of the AWS Direct Connect gateway is dependent on the AWS SDK response of the Direct Connect gateway as the primary response. The full resource configuration consists of some associated resources' data, including `attachments`, `associations`, and `association proposals`.
 
 ### Content
 Below are the AWS SDK used to generate this configuration.
@@ -1217,6 +1217,107 @@ Below are the AWS SDK used to generate this configuration.
         },
         "RetryAttempts": 0
     }
+}
+```
+</details>
+<br />
+  
+
+
+## AWS DX Router
+
+### Introduction
+The configuration of the AWS DX Router relies on the corresponding AWS SDK of the AWS Direct Connect virtual interface and connections. The AWS SDK provides detailed information regarding the configuration of the DX Router, including its connectivity, security, etc.
+
+### Content
+Below are the AWS SDK used to generate this configuration.
+|**Resource/Action**|**Relationship**|**AWS SDK document**|
+|------|------|------|
+| describe_virtual_interfaces | self | https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_virtual_interfaces.html |
+| describe_connections | connections | https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_connections.html |
+
+### Sample
+<details><summary>Configuration File</summary>
+
+```json
+{
+    "netbrainNotes": "This config file is generated via API",
+    "netbrainHostName": "EqDC2-xxxxxxxxxxxx(dxcon-xxxxxxxx)",
+    "ownerAccount": "xxxxxxxxxxx",
+    "virtualInterfaceId": "dxvif-xxxxxxxxx",
+    "location": "EqDC2",
+    "connectionId": "xxxxxxxxxxx",
+    "virtualInterfaceType": "private",
+    "virtualInterfaceName": "Virginia-VLAN-2",
+    "vlan": 468,
+    "asn": 8030,
+    "amazonSideAsn": 64520,
+    "amazonAddress": "172.16.253.18/30",
+    "customerAddress": "172.16.253.17/30",
+    "addressFamily": "ipv4",
+    "virtualInterfaceState": "available",
+    "mtu": 1500,
+    "jumboFrameCapable": true,
+    "virtualGatewayId": "vgw-xxxxxxxxxxxxxxx",
+    "directConnectGatewayId": "",
+    "routeFilterPrefixes": [],
+    "bgpPeers": [
+        {
+            "bgpPeerId": "dxpeer-xxxxxxxx",
+            "asn": 8030,
+            "addressFamily": "ipv4",
+            "amazonAddress": "172.16.253.18/30",
+            "customerAddress": "172.16.253.17/30",
+            "bgpPeerState": "available",
+            "bgpStatus": "up",
+            "awsDeviceV2": "EqDC2-xxxxxxxxxxx",
+            "awsLogicalDeviceId": "EqDC2-xxxxxxxxxxx"
+        }
+    ],
+    "region": "us-east-1",
+    "awsDeviceV2": "EqDC2-xxxxxxxxxxx",
+    "awsLogicalDeviceId": "EqDC2-xxxxxxxxxxx",
+    "tags": [],
+    "siteLinkEnabled": false,
+    # Describe connections: https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/directconnect/client/describe_connections.html
+    "connections": [
+        {
+            "ownerAccount": "xxxxxxxxxxx",
+            "connectionId": "xxxxxxxxxxx",
+            "connectionName": "xxxxxxxxxxx",
+            "connectionState": "xxxxxxxxxxx",
+            "region": "xxxxxxxxxxx",
+            "location": "xxxxxxxxxxx",
+            "bandwidth": "xxxxxxxxxxx",
+            "vlan": 123,
+            "partnerName": "xxxxxxxxxxx",
+            "loaIssueTime": "xxxxxxxxxxx",
+            "lagId": "xxxxxxxxxxx",
+            "awsDevice": "xxxxxxxxxxx",
+            "jumboFrameCapable": true,
+            "awsDeviceV2": "xxxxxxxxxxx",
+            "awsLogicalDeviceId": "xxxxxxxxxxx",
+            "hasLogicalRedundancy": "xxxxxxxxxxx",
+            "tags": [
+                {
+                    "key": "xxxxxxxxxxx",
+                    "value": "xxxxxxxxxxx"
+                }
+            ],
+            "providerName": "xxxxxxxxxxx",
+            "macSecCapable": true,
+            "portEncryptionStatus": "xxxxxxxxxxx",
+            "encryptionMode": "xxxxxxxxxxx",
+            "macSecKeys": [
+                {
+                    "secretARN": "xxxxxxxxxxx",
+                    "ckn": "xxxxxxxxxxx",
+                    "state": "xxxxxxxxxxx",
+                    "startOn": "xxxxxxxxxxx"
+                }
+            ]
+        }
+    ]
 }
 ```
 </details>
