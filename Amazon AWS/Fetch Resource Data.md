@@ -236,6 +236,12 @@ Begin Declare Input Parameters
     {"name": "$intf_name"}
  ]
  End Declare
+
+For sample
+[
+    {"name": "$param1"},
+    {"name": "$param2"}
+]
 '''
 
 import json
