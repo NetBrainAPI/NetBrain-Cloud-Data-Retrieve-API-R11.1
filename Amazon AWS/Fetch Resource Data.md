@@ -235,7 +235,7 @@ Begin Declare Input Parameters
  [
     {"name": "$intf_name"}
  ]
- End Declare
+End Declare
 
 For sample
 [
